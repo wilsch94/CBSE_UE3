@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ComponentCustomer">
+   <implementation class="componentcustomerconsumer.CustomerConsumer"/>
+   <reference bind="setCustomer" cardinality="1..1" interface="componentcustomer.model.CustomerService" name="CustomerService" policy="static" unbind="deleteCustomer"/>
+</scr:component>
