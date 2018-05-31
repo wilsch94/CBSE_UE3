@@ -6,11 +6,11 @@ import java.util.function.Consumer;
 
 public interface CustomerService {
 	
-	//void getCustomers(Consumer <List<Customer>> CustomerConsumer);
-	
 	List<Customer> getCustomers();
 	
-	void addCustomer(Customer customer);
-	
-	boolean deleteCustomer(long id); 
+	boolean saveCustomer(Customer customer);
+
+    Optional<Customer> getCustomer(long id);
+
+    boolean deleteCustomer(long id); 
 }

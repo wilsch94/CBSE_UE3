@@ -22,22 +22,19 @@ public class MyCustomerServiceImpl implements CustomerService {
 		customers = createInitialModel();
 	}
 
-	public List<Customer> getCustomers() {
+	public List<Customer> getCustomersInternal() {
 		return customers;
 	}
+	
 	/*@Override
 	public void getCustomers(Consumer<List<Customer>> CustomerConsumer) {
 		CustomerConsumer.accept(customers.stream().map(t -> t.copy()).collect(Collectors.toList()));
 	}*/
 	
-	public List<Customer> getCustomersInternal() {
-        return customers;
-    }
-	
 	
 
-	/*@Override
-	public synchronized boolean saveCostumer(Customer newCustomer) {
+	@Override
+	public synchronized boolean saveCustomer(Customer newCustomer) {
 		Optional<Customer> customerOptional = findById(newCustomer.getId());
 
         // get the actual todo or create a new one
@@ -57,7 +54,7 @@ public class MyCustomerServiceImpl implements CustomerService {
 	@Override
 	public Optional<Customer> getCustomer(long id) {
 		return findById(id).map(customer -> customer.copy());
-	}*/
+	}
 
 	@Override
 	public boolean deleteCustomer(long id) {
@@ -90,5 +87,11 @@ public class MyCustomerServiceImpl implements CustomerService {
 	private Optional<Customer> findById(long id) {
         return getCustomersInternal().stream().filter(t -> t.getId() == id).findAny();
     }
+
+	@Override
+	public List<Customer> getCustomers() {
+		return this.customers;
+		
+	}
 
 }
