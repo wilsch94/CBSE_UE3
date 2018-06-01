@@ -27,7 +27,7 @@ public class Activator implements BundleActivator {
         List<Customer> customers = new ArrayList<>();
         customers = service.getCustomers();
         for(Customer customer : customers) {
-        	System.out.println(customer.getName());
+        	System.out.println(customer.getName() +", "+ customer.getCity() +", "+ customer.getZipCode() +", "+ customer.getStreet());
         }
     }
 	
