@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FactoryAutomationCommonTypes
+Bundle-SymbolicName: FactoryAutomationCommonTypes
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: FactoryAutomationCommonTypes
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: customer.data,
+ customer.service,
+ order.data,
+ order.service,
+ stock.data,
+ stock.service

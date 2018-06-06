@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FactoryAutomationCustomer
+Bundle-SymbolicName: FactoryAutomationCustomer
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: FactoryAutomationCustomer
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: FactoryAutomationCommonTypes;bundle-version="1.0.0"
+Service-Component: OSGI-INF/serviceimpl.MyCustomerServiceImpl.xml
+Bundle-ActivationPolicy: lazy
